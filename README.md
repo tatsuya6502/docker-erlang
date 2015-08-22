@@ -2,10 +2,9 @@
 
 This git repository contains Dockerfiles to build kerl-based
 multi-release Erlang/OTP Docker image on specific Linux
-distribution. At this point, there is only one Docker image available.
-That image was built upon the official CentOS 6 image and contains
-Erlang/OTP 18, 17 and R16. I'm planning to add similar images on
-CentOS 7 and Arch Linux.
+distribution. For example, the image with tag `centos6-multi-otp`
+was built upon the official CentOS 6 image and contains Erlang/OTP
+18, 17 and R16.
 
 These images will be handy to create an Erlang application release
 containing ERTS for a specific Linux distribution.
@@ -61,21 +60,13 @@ Eshell V6.4.1.2  (abort with ^G)
 
 ### Available Tags
 
-Please note that there is no `latest` tag.
-
-| Tag                 | Description                                   |
-|---------------------|-----------------------------------------------|
-| `centos6-multi-otp` | Erlang/OTP 18, 17 and R16 on CentOS 6 image   |
-
-
-### Planned Tags
-
-The following tags are not yet available, but will become ready shortly.
-
 | Tag                 | Description                                   |
 |---------------------|-----------------------------------------------|
 | `arch-multi-otp`    | Erlang/OTP 18, 17 and R16 on Arch Linux image |
 | `centos7-multi-otp` | Erlang/OTP 18, 17 and R16 on CentOS 7 image   |
+| `centos6-multi-otp` | Erlang/OTP 18, 17 and R16 on CentOS 6 image   |
+
+Please note that there is no `latest` tag.
 
 
 ### Repository URLs
