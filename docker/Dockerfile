@@ -20,38 +20,14 @@
 ## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 ## THE SOFTWARE.
 
-FROM centos:centos6
+FROM quay.io/tatsuya6502/archlinux-x86_64
 MAINTAINER Tatsuya Kawano
 
-RUN (yum -y update && \
+RUN (pacman -Syu --noconfirm && \
 # Install basic utilities
-     yum -y install curl tar wget && \
+     pacman -S --noconfirm curl git sudo wget && \
 # Install packages to build Erlang/OTP
-     yum -y install gcc glibc-devel make ncurses-devel openssl-devel && \
-# Install packages to build git
-     yum -y install curl-devel expat-devel gettext-devel openssl-devel \
-     zlib-devel perl-ExtUtils-MakeMaker)
-
-# Install the latest git
-RUN (cd /tmp && \
-     wget -O git-2.4.8.tar.gz https://github.com/git/git/archive/v2.4.8.tar.gz && \
-     tar xf git-2.4.8.tar.gz && \
-     cd git-2.4.8 && \
-     make prefix=/usr/local all && \
-     make prefix=/usr/local install && \
-     cd .. && \
-     rm -rf git-*)
-
-# Install the latest autoconf
-RUN (cd /tmp && \
-     wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz && \
-     tar xf autoconf-2.69.tar.gz && \
-     cd autoconf-2.69 && \
-     ./configure --prefix=/usr && \
-     make && \
-     make install && \
-     cd .. && \
-     rm -rf autoconf-*)
+     pacman -S --noconfirm gcc glibc make ncurses openssh autoconf)
 
 # Install kerl
 ADD ./kerlrc /root/.kerlrc
@@ -87,6 +63,3 @@ RUN (kerl build git https://github.com/erlang/otp.git OTP-18.0.3 18.0.3_hipe && 
      /usr/local/erlang/show-otp-version.escript && \
 # Show kerl staus
      kerl status)
-
-# Clean Up
-RUN yum clean all
