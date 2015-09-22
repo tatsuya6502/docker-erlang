@@ -1,5 +1,7 @@
 ## docker-erlang - Dockerfiles to build Erlang/OTP images
 
+[![Docker Repository on Quay.io](https://quay.io/repository/tatsuya6502/erlang/status "Docker Repository on Quay.io")](https://quay.io/repository/tatsuya6502/erlang)
+
 This git repository contains Dockerfiles to build kerl-based
 multi-release Erlang/OTP Docker image on specific Linux
 distribution. For example, the image with tag `centos6-multi-otp`
