@@ -22,7 +22,7 @@ $ docker pull tatsuya6502/erlang:<tag>
 $ docker run -it --rm tatsuya6502/erlang:<tag> /bin/bash
 
 (Activate a release)
-# source /usr/local/erlang/18.0.3_hipe/activate
+# source /usr/local/erlang/18.1_hipe/activate
 ```
 
 For example
@@ -38,15 +38,15 @@ There are no builds available
 Available installations:
 r16b03-1_hipe /usr/local/erlang/r16b03-1_hipe
 17.5.6.3_hipe /usr/local/erlang/17.5.6.3_hipe
-18.0.3_hipe /usr/local/erlang/18.0.3_hipe
+18.1_hipe /usr/local/erlang/18.1_hipe
 ----------
 No Erlang/OTP kerl installation is currently active
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/18.0.3_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/18.1_hipe/activate
 [root@7a0afd51e424 /]# erl
-Erlang/OTP 18 [erts-7.0.3] [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 18 [erts-7.1] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
 
-Eshell V7.0.3  (abort with ^G)
+Eshell V7.1  (abort with ^G)
 1>  (Ctrl+G)
 User switch command
  --> q
@@ -69,6 +69,15 @@ Eshell V6.4.1.2  (abort with ^G)
 | `centos6-multi-otp` | Erlang/OTP 18, 17 and R16 on CentOS 6 image   |
 
 Please note that there is no `latest` tag.
+
+
+### Erlang/OTP Releases
+
+| Releases            | Install Locations                 |
+|---------------------|-----------------------------------|
+| Erlang/OTP 18.1     | `/usr/local/erlang/18.1_hipe`     |
+| Erlang/OTP 17.5.6.3 | `/usr/local/erlang/17.5.6.3_hipe` |
+| Erlang/OTP R16B03-1 | `/usr/local/erlang/r16b03-1_hipe` |
 
 
 ### Repository URLs
