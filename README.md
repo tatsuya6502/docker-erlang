@@ -37,12 +37,12 @@ There are no builds available
 ----------
 Available installations:
 r16b03-1_hipe /usr/local/erlang/r16b03-1_hipe
-17.5.6.3_hipe /usr/local/erlang/17.5.6.3_hipe
-18.1_hipe /usr/local/erlang/18.1_hipe
+17.5.6.4_hipe /usr/local/erlang/17.5.6.4_hipe
+18.1.3_hipe /usr/local/erlang/18.1.3_hipe
 ----------
 No Erlang/OTP kerl installation is currently active
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/18.1_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/18.1.3_hipe/activate
 [root@7a0afd51e424 /]# erl
 Erlang/OTP 18 [erts-7.1] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
 
@@ -51,9 +51,9 @@ Eshell V7.1  (abort with ^G)
 User switch command
  --> q
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/17.5.6.3_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/17.5.6.4_hipe/activate
 [root@7a0afd51e424 /]# erl
-Erlang/OTP 17 [erts-6.4.1.2] [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 17 [erts-6.4.1.3] [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
 
 Eshell V6.4.1.2  (abort with ^G)
 1>
@@ -75,8 +75,8 @@ Please note that there is no `latest` tag.
 
 | Releases            | Install Locations                 |
 |---------------------|-----------------------------------|
-| Erlang/OTP 18.1     | `/usr/local/erlang/18.1_hipe`     |
-| Erlang/OTP 17.5.6.3 | `/usr/local/erlang/17.5.6.3_hipe` |
+| Erlang/OTP 18.1.3   | `/usr/local/erlang/18.1.3_hipe`   |
+| Erlang/OTP 17.5.6.4 | `/usr/local/erlang/17.5.6.4_hipe` |
 | Erlang/OTP R16B03-1 | `/usr/local/erlang/r16b03-1_hipe` |
 
 
