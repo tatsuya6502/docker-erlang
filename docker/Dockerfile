@@ -27,7 +27,7 @@ MAINTAINER Tatsuya Kawano
 # to omit the cached Docker images. This will have the same effect to
 # adding `--no-cache` to `docker build` command.
 #
-ENV DOCKERFILE_UPDATED 2015-11-01
+ENV DOCKERFILE_UPDATED 2015-11-28
 
 RUN (yum -y update && \
 # Install basic utilities
