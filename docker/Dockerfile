@@ -27,7 +27,7 @@ MAINTAINER Tatsuya Kawano
 # to omit the cached Docker images. This will have the same effect to
 # adding `--no-cache` to `docker build` command.
 #
-ENV DOCKERFILE_UPDATED 2015-12-08
+ENV DOCKERFILE_UPDATED 2015-12-18
 
 RUN (yum -y update && \
 # Install basic utilities
@@ -70,26 +70,32 @@ ADD ./show-otp-version.escript /usr/local/erlang/show-otp-version.escript
 RUN chmod 744 /usr/local/erlang/show-otp-version.escript
 
 # Install Erlang/OTP R16 with kerl
-RUN (kerl build R16B03-1 r16b03-1_hipe && \
-     kerl install r16b03-1_hipe /usr/local/erlang/r16b03-1_hipe && \
-     kerl delete build r16b03-1_hipe && \
-     rm /root/.kerl/archives/otp_src_R16B03-1.tar.gz && \
-     source /usr/local/erlang/r16b03-1_hipe/activate && \
+RUN (OTP_VERSION=R16B03-1 && \
+     BUILD_NAME=r16b03-1_hipe && \
+     kerl build ${OTP_VERSION} ${BUILD_NAME} && \
+     kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
+     kerl delete build ${BUILD_NAME} && \
+     rm /root/.kerl/archives/otp_src_${OTP_VERSION}.tar.gz && \
+     source /usr/local/erlang/${BUILD_NAME}/activate && \
      /usr/local/erlang/show-otp-version.escript)
 
 # Install Erlang/OTP 17 with kerl
-RUN (kerl build git https://github.com/erlang/otp.git OTP-17.5.6.6 17.5.6.6_hipe && \
-     kerl install 17.5.6.6_hipe /usr/local/erlang/17.5.6.6_hipe && \
-     kerl delete build 17.5.6.6_hipe && \
-     source /usr/local/erlang/17.5.6.6_hipe/activate && \
+RUN (OTP_VERSION=17.5.6.6 && \
+     BUILD_NAME=${OTP_VERSION}_hipe && \
+     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
+     kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
+     kerl delete build ${BUILD_NAME} && \
+     source /usr/local/erlang/${BUILD_NAME}/activate && \
      /usr/local/erlang/show-otp-version.escript)
 
 # Install Erlang/OTP 18 with kerl
-RUN (kerl build git https://github.com/erlang/otp.git OTP-18.1.5 18.1.5_hipe && \
-     kerl install 18.1.5_hipe /usr/local/erlang/18.1.5_hipe && \
-     kerl delete build 18.1.5_hipe && \
+RUN (OTP_VERSION=18.2 && \
+     BUILD_NAME=${OTP_VERSION}_hipe && \
+     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
+     kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
+     kerl delete build ${BUILD_NAME} && \
      rm -rf /root/.kerl/gits/* && \
-     source /usr/local/erlang/18.1.5_hipe/activate && \
+     source /usr/local/erlang/${BUILD_NAME}/activate && \
      /usr/local/erlang/show-otp-version.escript && \
 # Show kerl staus
      kerl status)
