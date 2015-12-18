@@ -67,11 +67,11 @@ RUN (OTP_VERSION=17.5.6.6 && \
 # Install Erlang/OTP 18 with kerl
 RUN (OTP_VERSION=18.2 && \
      BUILD_NAME=${OTP_VERSION}_hipe && \
-     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BULID_NAME} && \
-     kerl install ${BULID_NAME} /usr/local/erlang/${BULID_NAME} && \
-     kerl delete build ${BULID_NAME} && \
+     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
+     kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
+     kerl delete build ${BUILD_NAME} && \
      rm -rf /root/.kerl/gits/* && \
-     source /usr/local/erlang/${BULID_NAME}/activate && \
+     source /usr/local/erlang/${BUILD_NAME}/activate && \
      /usr/local/erlang/show-otp-version.escript && \
 # Show kerl staus
      kerl status)
