@@ -58,20 +58,20 @@ RUN (OTP_VERSION=R16B03-1 && \
 # Install Erlang/OTP 17 with kerl
 RUN (OTP_VERSION=17.5.6.6 && \
      BUILD_NAME=${OTP_VERSION}_hipe && \
-     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BULID_VERSION} && \
-     kerl install ${BULID_VERSION} /usr/local/erlang/${BULID_VERSION} && \
-     kerl delete build ${BULID_VERSION} && \
-     source /usr/local/erlang/${BULID_VERSION}/activate && \
+     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
+     kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
+     kerl delete build ${BUILD_NAME} && \
+     source /usr/local/erlang/${BUILD_NAME}/activate && \
      /usr/local/erlang/show-otp-version.escript)
 
 # Install Erlang/OTP 18 with kerl
 RUN (OTP_VERSION=18.2 && \
      BUILD_NAME=${OTP_VERSION}_hipe && \
-     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_VERSION} && \
-     kerl install ${BUILD_VERSION} /usr/local/erlang/${BUILD_VERSION} && \
-     kerl delete build ${BUILD_VERSION} && \
+     kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
+     kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
+     kerl delete build ${BUILD_NAME} && \
      rm -rf /root/.kerl/gits/* && \
-     source /usr/local/erlang/${BUILD_VERSION}/activate && \
+     source /usr/local/erlang/${BUILD_NAME}/activate && \
      /usr/local/erlang/show-otp-version.escript && \
 # Show kerl staus
      kerl status)
