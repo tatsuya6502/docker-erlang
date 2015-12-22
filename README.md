@@ -51,7 +51,7 @@ Eshell V7.2.1  (abort with ^G)
 User switch command
  --> q
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/17.5.6.6_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/17.5.6.7_hipe/activate
 [root@7a0afd51e424 /]# erl
 Erlang/OTP 17 [erts-6.4.1.5] [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
 
@@ -76,7 +76,7 @@ Please note that there is no `latest` tag.
 | Releases            | Install Locations                 |
 |---------------------|-----------------------------------|
 | Erlang/OTP 18.2.1   | `/usr/local/erlang/18.2.1_hipe`   |
-| Erlang/OTP 17.5.6.6 | `/usr/local/erlang/17.5.6.6_hipe` |
+| Erlang/OTP 17.5.6.7 | `/usr/local/erlang/17.5.6.7_hipe` |
 | Erlang/OTP R16B03-1 | `/usr/local/erlang/r16b03-1_hipe` |
 
 
