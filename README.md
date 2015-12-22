@@ -38,15 +38,15 @@ There are no builds available
 Available installations:
 r16b03-1_hipe /usr/local/erlang/r16b03-1_hipe
 17.5.6.6_hipe /usr/local/erlang/17.5.6.6_hipe
-18.2_hipe /usr/local/erlang/18.2_hipe
+18.2.1_hipe /usr/local/erlang/18.2.1_hipe
 ----------
 No Erlang/OTP kerl installation is currently active
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/18.2_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/18.2.1_hipe/activate
 [root@7a0afd51e424 /]# erl
-Erlang/OTP 18 [erts-7.2] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 18 [erts-7.2.1] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
 
-Eshell V7.2  (abort with ^G)
+Eshell V7.2.1  (abort with ^G)
 1>  (Ctrl+G)
 User switch command
  --> q
@@ -75,7 +75,7 @@ Please note that there is no `latest` tag.
 
 | Releases            | Install Locations                 |
 |---------------------|-----------------------------------|
-| Erlang/OTP 18.2     | `/usr/local/erlang/18.2_hipe`     |
+| Erlang/OTP 18.2.1   | `/usr/local/erlang/18.2.1_hipe`   |
 | Erlang/OTP 17.5.6.6 | `/usr/local/erlang/17.5.6.6_hipe` |
 | Erlang/OTP R16B03-1 | `/usr/local/erlang/r16b03-1_hipe` |
 
