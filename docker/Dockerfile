@@ -27,7 +27,7 @@ MAINTAINER Tatsuya Kawano
 # to omit the cached Docker images. This will have the same effect to
 # adding `--no-cache` to `docker build` command.
 #
-ENV DOCKERFILE_UPDATED 2015-12-18
+ENV DOCKERFILE_UPDATED 2015-12-22
 
 RUN (yum -y update && \
 # Install basic utilities
@@ -89,7 +89,7 @@ RUN (OTP_VERSION=17.5.6.6 && \
      /usr/local/erlang/show-otp-version.escript)
 
 # Install Erlang/OTP 18 with kerl
-RUN (OTP_VERSION=18.2 && \
+RUN (OTP_VERSION=18.2.1 && \
      BUILD_NAME=${OTP_VERSION}_hipe && \
      kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
      kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
