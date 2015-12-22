@@ -80,7 +80,7 @@ RUN (OTP_VERSION=R16B03-1 && \
      /usr/local/erlang/show-otp-version.escript)
 
 # Install Erlang/OTP 17 with kerl
-RUN (OTP_VERSION=17.5.6.6 && \
+RUN (OTP_VERSION=17.5.6.7 && \
      BUILD_NAME=${OTP_VERSION}_hipe && \
      kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
      kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
