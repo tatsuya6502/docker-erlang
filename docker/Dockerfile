@@ -39,7 +39,7 @@ RUN (yum -y update && \
      zlib-devel perl-ExtUtils-MakeMaker)
 
 # Install the latest git
-RUN (VERSION=2.7.0
+RUN (VERSION=2.7.0; \
      cd /tmp && \
      wget -O git-${VERSION}.tar.gz https://github.com/git/git/archive/v${VERSION}.tar.gz && \
      tar xf git-${VERSION}.tar.gz && \
@@ -50,7 +50,7 @@ RUN (VERSION=2.7.0
      rm -rf git-*)
 
 # Install the latest autoconf
-RUN (VERSION=2.69
+RUN (VERSION=2.69; \
      cd /tmp && \
      wget http://ftp.gnu.org/gnu/autoconf/autoconf-${VERSION}.tar.gz && \
      tar xf autoconf-${VERSION}.tar.gz && \
