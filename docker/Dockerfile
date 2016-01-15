@@ -1,6 +1,6 @@
 ## The MIT License
 ##
-## Copyright (C) 2015 by Tatsuya Kawano
+## Copyright (C) 2015-2016 by Tatsuya Kawano
 ##
 ## Permission is hereby granted, free of charge, to any person obtaining a copy
 ## of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ MAINTAINER Tatsuya Kawano
 # to omit the cached Docker images. This will have the same effect to
 # adding `--no-cache` to `docker build` command.
 #
-ENV DOCKERFILE_UPDATED 2015-12-22
+ENV DOCKERFILE_UPDATED 2016-01-15
 
 RUN (yum -y update && \
 # Install basic utilities
@@ -39,20 +39,22 @@ RUN (yum -y update && \
      zlib-devel perl-ExtUtils-MakeMaker)
 
 # Install the latest git
-RUN (cd /tmp && \
-     wget -O git-2.4.8.tar.gz https://github.com/git/git/archive/v2.4.8.tar.gz && \
-     tar xf git-2.4.8.tar.gz && \
-     cd git-2.4.8 && \
+RUN (VERSION=2.7.0
+     cd /tmp && \
+     wget -O git-${VERSION}.tar.gz https://github.com/git/git/archive/v${VERSION}.tar.gz && \
+     tar xf git-${VERSION}.tar.gz && \
+     cd git-${VERSION} && \
      make prefix=/usr/local all && \
      make prefix=/usr/local install && \
      cd .. && \
      rm -rf git-*)
 
 # Install the latest autoconf
-RUN (cd /tmp && \
-     wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz && \
-     tar xf autoconf-2.69.tar.gz && \
-     cd autoconf-2.69 && \
+RUN (VERSION=2.69
+     cd /tmp && \
+     wget http://ftp.gnu.org/gnu/autoconf/autoconf-${VERSION}.tar.gz && \
+     tar xf autoconf-${VERSION}.tar.gz && \
+     cd autoconf-${VERSION} && \
      ./configure --prefix=/usr && \
      make && \
      make install && \
@@ -89,7 +91,7 @@ RUN (OTP_VERSION=17.5.6.7 && \
      /usr/local/erlang/show-otp-version.escript)
 
 # Install Erlang/OTP 18 with kerl
-RUN (OTP_VERSION=18.2.1 && \
+RUN (OTP_VERSION=18.2.2 && \
      BUILD_NAME=${OTP_VERSION}_hipe && \
      kerl build git https://github.com/erlang/otp.git OTP-${OTP_VERSION} ${BUILD_NAME} && \
      kerl install ${BUILD_NAME} /usr/local/erlang/${BUILD_NAME} && \
