@@ -37,12 +37,12 @@ There are no builds available
 ----------
 Available installations:
 r16b03-1_hipe /usr/local/erlang/r16b03-1_hipe
-17.5.6.7_hipe /usr/local/erlang/17.5.6.7_hipe
-18.2.2_hipe /usr/local/erlang/18.2.2_hipe
+17.5.6.8_hipe /usr/local/erlang/17.5.6.8_hipe
+18.2.3_hipe /usr/local/erlang/18.2.3_hipe
 ----------
 No Erlang/OTP kerl installation is currently active
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/18.2.2_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/18.2.3_hipe/activate
 [root@7a0afd51e424 /]# erl
 Erlang/OTP 18 [erts-7.2.1] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
 
@@ -51,7 +51,7 @@ Eshell V7.2.1  (abort with ^G)
 User switch command
  --> q
 
-[root@7a0afd51e424 /]# source /usr/local/erlang/17.5.6.7_hipe/activate
+[root@7a0afd51e424 /]# source /usr/local/erlang/17.5.6.8_hipe/activate
 [root@7a0afd51e424 /]# erl
 Erlang/OTP 17 [erts-6.4.1.5] [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
 
@@ -75,8 +75,8 @@ Please note that there is no `latest` tag.
 
 | Releases            | Install Location                  | Config Options                         |
 |---------------------|-----------------------------------|----------------------------------------|
-| OTP 18.2.2 (HiPE)   | `/usr/local/erlang/18.2.2_hipe`   | `--enable-hipe` `--enable-native-libs` |
-| OTP 17.5.6.7 (HiPE) | `/usr/local/erlang/17.5.6.7_hipe` | `--enable-hipe` `--enable-native-libs` |
+| OTP 18.2.3 (HiPE)   | `/usr/local/erlang/18.2.3_hipe`   | `--enable-hipe` `--enable-native-libs` |
+| OTP 17.5.6.8 (HiPE) | `/usr/local/erlang/17.5.6.8_hipe` | `--enable-hipe` `--enable-native-libs` |
 | OTP R16B03-1 (HiPE) | `/usr/local/erlang/r16b03-1_hipe` | `--enable-hipe` `--enable-native-libs` |
 
 
