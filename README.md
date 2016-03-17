@@ -22,7 +22,7 @@ $ docker pull quay.io/tatsuya6502/erlang:<tag>
 $ docker run -it --rm quay.io/tatsuya6502/erlang:<tag> /bin/bash
 
 (Activate a release)
-# source /usr/local/erlang/18.2.4_hipe/activate
+# source /usr/local/erlang/18.3_hipe/activate
 ```
 
 For example
@@ -38,15 +38,15 @@ There are no builds available
 Available installations:
 r16b03-1_hipe /usr/local/erlang/r16b03-1_hipe
 17.5.6.8_hipe /usr/local/erlang/17.5.6.8_hipe
-18.2.4_hipe /usr/local/erlang/18.2.4_hipe
+18.3_hipe /usr/local/erlang/18.3_hipe
 ----------
 No Erlang/OTP kerl installation is currently active
 
 [root@7a0afd51e424 /]# source /usr/local/erlang/18.2.4_hipe/activate
 [root@7a0afd51e424 /]# erl
-Erlang/OTP 18 [erts-7.2.1] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 18 [erts-7.3] [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false]
 
-Eshell V7.2.1  (abort with ^G)
+Eshell V7.3  (abort with ^G)
 1>  (Ctrl+G)
 User switch command
  --> q
@@ -75,7 +75,7 @@ Please note that there is no `latest` tag.
 
 | Releases            | Install Location                  | Config Options                         |
 |---------------------|-----------------------------------|----------------------------------------|
-| OTP 18.2.4 (HiPE)   | `/usr/local/erlang/18.2.4_hipe`   | `--enable-hipe` `--enable-native-libs` |
+| OTP 18.3 (HiPE)     | `/usr/local/erlang/18.3_hipe`     | `--enable-hipe` `--enable-native-libs` |
 | OTP 17.5.6.8 (HiPE) | `/usr/local/erlang/17.5.6.8_hipe` | `--enable-hipe` `--enable-native-libs` |
 | OTP R16B03-1 (HiPE) | `/usr/local/erlang/r16b03-1_hipe` | `--enable-hipe` `--enable-native-libs` |
 
