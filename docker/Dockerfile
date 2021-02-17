@@ -11,7 +11,7 @@ RUN (yum -y update && \
 # Install basic utilities
      yum -y install curl git tar wget && \
 # Install packages to build Erlang/OTP
-     yum -y install gcc glibc-devel make ncurses-devel openssl-devel autoconf)
+     yum -y install gcc glibc-devel make ncurses-devel openssl-devel autoconf automake)
 
 # Install kerl
 ADD ./kerlrc /root/.kerlrc
