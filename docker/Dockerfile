@@ -4,8 +4,8 @@ FROM centos:centos7
 # to omit the cached Docker images. This will have the same effect to
 # adding `--no-cache` to `docker build` command.
 #
-ENV DOCKERFILE_UPDATED 2021-02-17
-ENV OTP_VERSION 22.3.4.15
+ENV DOCKERFILE_UPDATED 2021-04-21
+ENV OTP_VERSION 23.3.1
 
 RUN (yum -y update && \
 # Install basic utilities
