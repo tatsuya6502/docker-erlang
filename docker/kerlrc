@@ -1,1 +1,1 @@
-KERL_CONFIGURE_OPTIONS="--enable-hipe --enable-native-libs --enable-dirty-schedulers --enable-smp-support --enable-threads --enable-kernel-poll"
+KERL_CONFIGURE_OPTIONS="--enable-hipe --enable-dirty-schedulers --enable-smp-support --enable-threads --enable-kernel-poll"
